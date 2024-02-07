@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const { server } = require('socket.io')
 
 require('dotenv').config();
 
@@ -14,8 +15,6 @@ db.once('open', () => {console.log('Status: connected to database!');});
 
 
 const app = express();
-
-
 
 
 app.listen(port, () => {
